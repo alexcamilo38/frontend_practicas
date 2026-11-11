@@ -52,20 +52,16 @@
                             placeholder="Ingrese el expediente del alumno">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="modulo_id" class="form-label fw-bold">
-                            Módulo
-                        </label>
-                        <select name="modulo_id" id="modulo_id" class="form-select">
-                            <option value="">Seleccione un módulo...</option>
-                            @foreach ($modulos as $modulo)
-                                <option value="{{ $modulo->id }}"
-                                    {{ old('modulo_id', $alumnos['modulo_id'] ?? '') == $modulo->id ? 'selected' : '' }}>
-                                    {{ $modulo->nombre ?? ($modulo->nombre ?? $modulo->id) }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <div class="mb-4">
+                                <label for="modulo_id" class="form-label text-muted small fw-bold text-uppercase tracking-wider">modulo asociado</label>
+                                <select name="modulo_id" id="modulo_id" class="form-select form-select-lg bg-light border-0 rounded-3 text-dark fw-medium" required>
+                                    @foreach($modulos as $modulo)
+                                    <option value="{{ $modulo['id'] }}" {{ old('modulo_id', $alumnos['modulo_id']) == $alumnos['id'] ? 'selected' : '' }}>
+                                        {{ $modulo['nombre'] }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
 
                     <div class="d-flex justify-content-between mt-4">
                         <a href="{{ url()->previous() }}" class="btn btn-secondary">

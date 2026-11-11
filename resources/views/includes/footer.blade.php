@@ -109,7 +109,7 @@
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <span class="brand-mark"><i class="bi bi-mortarboard-fill"></i></span>
                     <div>
-                        <h5 class="fw-bold mb-0 fs-4">Admin <span style="color: #39A900;">SENA</span></h5>
+                        <h5 class="fw-bold mb-0 fs-4">Sistema de  <span style="color: #39A900;"> Gestión</span></h5>
                         <small class="text-white-50">Panel de Administración Académica</small>
                     </div>
                 </div>
